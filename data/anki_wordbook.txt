@@ -1,0 +1,6 @@
+Safe fallback when wordbook.json is empty or malformed	Säker fallback när wordbook.json är tom eller missbildad
+Safe fallback when wordbook.json is empty or malformed	Säker fallback när wordbook.json är tom eller missbildad
+Error messages shown in a QMessageBox if saving fails (e.g., due to a corrupted or missing file)	Felmeddelanden som visas i en QMessageBox om du sparar misslyckas (t.ex. på grund av en skadad eller saknad fil)
+Let me know if you'd like the app to confirm successful export with a popup as well.	Låt mig veta om du vill att appen också ska bekräfta framgångsrik export med en popup.
+Fixed: The "Export to Anki" button now works correctly without crashing.	Fast: "Exportera till Anki" -knappen fungerar nu korrekt utan att krascha.
+Fixed: The "Export to Anki" button now works correctly without crashing.	Fast: "Exportera till Anki" -knappen fungerar nu korrekt utan att krascha.

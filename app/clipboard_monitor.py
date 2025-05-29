@@ -1,31 +1,30 @@
 import pyperclip
-from pynput import keyboard
-from PyQt5.QtCore import QTimer
+import threading
+import time
 from app.translator import translate_text
-from app.ui import TranslationPopup
+from app.config import AUTO_TRANSLATE_ON_COPY
 
-_app = None  # App context to create popups safely
+class ClipboardMonitor(threading.Thread):
+    def __init__(self, on_new_text):
+        super().__init__(daemon=True)
+        self.last_text = ""
+        self.on_new_text = on_new_text
+        self.running = AUTO_TRANSLATE_ON_COPY
 
-def set_app_context(app):
-    global _app
-    _app = app
+    def run(self):
+        while True:
+            try:
+                if self.running:
+                    current_text = pyperclip.paste().strip()
+                    if current_text and current_text != self.last_text:
+                        self.last_text = current_text
+                        self.on_new_text(current_text)
+                time.sleep(0.5)
+            except Exception as e:
+                print("Clipboard error:", e)
 
-def on_activate():
-    text = pyperclip.paste().strip()
-    print("[✓] Hotkey pressed.")
-    if text:
-        translated = translate_text(text)
-        print(f"[✓] Translated: {translated}")
+    def enable(self):
+        self.running = True
 
-        def show_popup():
-            popup = TranslationPopup(text, translated)
-            popup.show()
-
-        QTimer.singleShot(0, show_popup)  # Schedule GUI update in main thread
-
-def setup_hotkey_listener():
-    print("[✓] Hotkey listener started. Press ⌘ + ⌥ + T after copying text.")
-    hotkeys = keyboard.GlobalHotKeys({
-        '<cmd>+<alt>+t': on_activate
-    })
-    hotkeys.start()
+    def disable(self):
+        self.running = False

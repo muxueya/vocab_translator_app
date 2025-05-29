@@ -1,0 +1,26 @@
+[
+  {
+    "original": "Safe fallback when wordbook.json is empty or malformed",
+    "translated": "Säker fallback när wordbook.json är tom eller missbildad"
+  },
+  {
+    "original": "Safe fallback when wordbook.json is empty or malformed",
+    "translated": "Säker fallback när wordbook.json är tom eller missbildad"
+  },
+  {
+    "original": "Error messages shown in a QMessageBox if saving fails (e.g., due to a corrupted or missing file)",
+    "translated": "Felmeddelanden som visas i en QMessageBox om du sparar misslyckas (t.ex. på grund av en skadad eller saknad fil)"
+  },
+  {
+    "original": "Let me know if you'd like the app to confirm successful export with a popup as well.",
+    "translated": "Låt mig veta om du vill att appen också ska bekräfta framgångsrik export med en popup."
+  },
+  {
+    "original": "Fixed: The \"Export to Anki\" button now works correctly without crashing.",
+    "translated": "Fast: \"Exportera till Anki\" -knappen fungerar nu korrekt utan att krascha."
+  },
+  {
+    "original": "Fixed: The \"Export to Anki\" button now works correctly without crashing.",
+    "translated": "Fast: \"Exportera till Anki\" -knappen fungerar nu korrekt utan att krascha."
+  }
+]
