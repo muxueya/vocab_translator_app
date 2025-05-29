@@ -28,3 +28,4 @@ class ClipboardMonitor(threading.Thread):
 
     def disable(self):
         self.running = False
+

@@ -28,3 +28,4 @@ def export_wordbook_to_anki(filename=None):
         print(f"[✓] Exported {len(wordbook)} entries to {filename}")
     except Exception as e:
         raise RuntimeError(f"Failed to export to Anki: {e}")
+

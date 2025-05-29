@@ -22,5 +22,13 @@
   {
     "original": "Fixed: The \"Export to Anki\" button now works correctly without crashing.",
     "translated": "Fast: \"Exportera till Anki\" -knappen fungerar nu korrekt utan att krascha."
+  },
+  {
+    "original": "Would you like help integrating a proper main.py entry point using QApplication and TranslatorApp cleanly?",
+    "translated": "Vill du hjälpa till att integrera en ordentlig main.py -ingångspunkt med QApplication och TranslatorApp rent?"
+  },
+  {
+    "original": "All GUI changes happen safely in the main thread using pyqtSignal.",
+    "translated": "Alla GUI -förändringar sker säkert i huvudtråden med hjälp av pyqtsignal."
   }
 ]

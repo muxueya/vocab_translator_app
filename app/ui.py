@@ -25,3 +25,4 @@ class TranslationPopup(QWidget):
             save_to_wordbook(original, translated)
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Failed to save word: {e}")
+
