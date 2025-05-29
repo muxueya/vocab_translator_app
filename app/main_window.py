@@ -1,16 +1,23 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QCheckBox, QMessageBox, QMenuBar, QAction, QTextEdit, QSizePolicy, QScrollArea
-from PyQt5.QtCore import Qt, QTimer, pyqtSignal  # ✅ Added pyqtSignal
+from PyQt5.QtCore import Qt, QTimer, pyqtSignal
 import pyperclip
 import json
 import os
 import subprocess
+import asyncio
+import edge_tts
+import tempfile
+import platform
+import threading
+from langdetect import detect
 from app.translator import translate_text
 from app.storage import save_to_wordbook, export_wordbook_to_anki
 from app.clipboard_monitor import ClipboardMonitor
 from app.config import APPEARANCE_FILE
 
 class TranslatorApp(QWidget):
-    clipboard_text_received = pyqtSignal(str)  # ✅ Define signal to handle clipboard text in GUI thread
+    clipboard_text_received = pyqtSignal(str)
+    audio_ready = pyqtSignal(str)  # ✅ Signal to play audio in main thread
 
     def __init__(self):
         super().__init__()
@@ -18,6 +25,9 @@ class TranslatorApp(QWidget):
         self.setGeometry(300, 300, 500, 300)
         self.setFixedSize(800, 400)
         self.setWindowFlag(Qt.WindowStaysOnTopHint)
+
+        self.audio_process = None
+        self.audio_file = None
 
         self.menu_bar = QMenuBar(self)
         file_menu = self.menu_bar.addMenu("Options")
@@ -62,9 +72,21 @@ class TranslatorApp(QWidget):
         self.save_btn.setStyleSheet("padding: 6px; border-radius: 5px; background-color: #e0e0e0;")
         self.save_btn.clicked.connect(self.save_to_wordbook)
 
+        self.read_original_btn = QPushButton("Read Original")
+        self.read_original_btn.setFixedWidth(120)
+        self.read_original_btn.setStyleSheet("padding: 6px; border-radius: 5px; background-color: #d0f0d0;")
+        self.read_original_btn.clicked.connect(self.read_original)
+
+        self.read_translated_btn = QPushButton("Read Translated")
+        self.read_translated_btn.setFixedWidth(120)
+        self.read_translated_btn.setStyleSheet("padding: 6px; border-radius: 5px; background-color: #d0f0d0;")
+        self.read_translated_btn.clicked.connect(self.read_translated)
+
         button_layout.addWidget(self.copy_translate_btn)
         button_layout.addWidget(self.copy_translated_btn)
         button_layout.addWidget(self.save_btn)
+        button_layout.addWidget(self.read_original_btn)
+        button_layout.addWidget(self.read_translated_btn)
 
         self.auto_check = QCheckBox("Auto-translate on copy")
         self.auto_check.setChecked(False)
@@ -84,7 +106,8 @@ class TranslatorApp(QWidget):
         self.last_original = ""
         self.last_translation = ""
 
-        self.clipboard_text_received.connect(self.process_clipboard_text)  # ✅ Connect signal to handler
+        self.clipboard_text_received.connect(self.process_clipboard_text)
+        self.audio_ready.connect(self.play_audio)  # ✅ Connect signal to play audio
         self.clipboard_monitor = ClipboardMonitor(self.handle_clipboard_translation)
         self.clipboard_monitor.start()
 
@@ -93,57 +116,29 @@ class TranslatorApp(QWidget):
 
     def handle_manual_translate(self):
         try:
-            text = pyperclip.paste()
-            if not isinstance(text, str):
-                raise ValueError("Clipboard does not contain text.")
-            text = text.strip()
+            text = pyperclip.paste().strip()
             if text:
                 self.show_translation(text)
         except Exception as e:
             QMessageBox.warning(self, "Clipboard Error", f"Could not read text from clipboard: {e}")
 
     def handle_clipboard_translation(self, text):
-        print("[DEBUG] Clipboard callback triggered")
-        print(f"[DEBUG] Raw clipboard content: {repr(text)}")
-
-        # ✅ Emit the signal to safely process translation in main thread
         self.clipboard_text_received.emit(text)
 
-    def process_clipboard_text(self, text):  # ✅ Slot for signal
-        print("[DEBUG] Processing clipboard content")
-
+    def process_clipboard_text(self, text):
         if not self.clipboard_monitor.running:
-            print("[DEBUG] Clipboard monitor is disabled. Skipping translation.")
-            return
-
-        if not isinstance(text, str):
-            print("[DEBUG] Clipboard content is not text. Ignored.")
             return
         try:
             text_cleaned = text.strip()
         except AttributeError:
-            print("[DEBUG] Clipboard content is not valid text (strip failed). Ignored.")
             return
         if not text_cleaned:
-            print("[DEBUG] Clipboard text is empty after stripping. Ignored.")
             return
-
-        max_length = getattr(self, "max_text_length", 2000)
-        truncated = False
-        if len(text_cleaned) > max_length:
-            text_cleaned = text_cleaned[:max_length] + "..."
-            truncated = True
-
-        print(f"[DEBUG] Text to translate: {repr(text_cleaned)}")
+        if len(text_cleaned) > self.max_text_length:
+            text_cleaned = text_cleaned[:self.max_text_length] + "..."
         translated = translate_text(text_cleaned)
         if not isinstance(translated, str):
-            print("[DEBUG] Translation result is not text. Ignored.")
             return
-
-        if truncated:
-            translated += "..."
-
-        print(f"[DEBUG] Translation result: {repr(translated)}")
         self.last_original = text_cleaned
         self.last_translation = translated
         self.original_label.setText(text_cleaned)
@@ -151,34 +146,23 @@ class TranslatorApp(QWidget):
 
     def handle_auto_toggle(self, state):
         if state == Qt.Checked:
-            print("[DEBUG] Auto-translate checkbox changed: True")
-            self.clipboard_monitor.enable()  # ✅ Control monitor state
+            self.clipboard_monitor.enable()
         else:
-            print("[DEBUG] Auto-translate checkbox changed: False")
             self.clipboard_monitor.disable()
 
     def show_translation(self, text):
-        try:
-            translated = translate_text(text)
-            self.last_original = text
-            self.last_translation = translated
-            self.original_label.setText(text)
-            self.translation_label.setText(translated)
-        except Exception as e:
-            QMessageBox.warning(self, "Translation Error", f"Failed to translate text: {e}")
+        translated = translate_text(text)
+        self.last_original = text
+        self.last_translation = translated
+        self.original_label.setText(text)
+        self.translation_label.setText(translated)
 
     def save_to_wordbook(self):
         if self.last_original and self.last_translation:
-            try:
-                save_to_wordbook(self.last_original, self.last_translation)
-            except Exception as e:
-                QMessageBox.critical(self, "Error", f"Failed to save word: {e}")
+            save_to_wordbook(self.last_original, self.last_translation)
 
     def export_to_anki(self):
-        try:
-            export_wordbook_to_anki()
-        except Exception as e:
-            QMessageBox.critical(self, "Export Error", str(e))
+        export_wordbook_to_anki()
 
     def copy_translated_text(self):
         if self.last_translation:
@@ -202,3 +186,53 @@ class TranslatorApp(QWidget):
             subprocess.run(["open", "-a", "Visual Studio Code", APPEARANCE_FILE])
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Could not open appearance file: {e}")
+
+    def read_text_aloud(self, text):
+        try:
+            lang = detect(text)
+            voice = "sv-SE-MattiasNeural" if lang == "sv" else "en-US-GuyNeural"
+        except:
+            voice = "en-US-GuyNeural"
+
+        if self.audio_process:
+            self.stop_audio()
+            return
+
+        def run_tts():
+            try:
+                communicate = edge_tts.Communicate(text, voice)
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
+                    self.audio_file = tmp.name
+                    asyncio.run(communicate.save(self.audio_file))
+                self.audio_ready.emit(self.audio_file)  # ✅ Safe call in main thread
+            except Exception as e:
+                print(f"[TTS ERROR] {e}")
+
+        threading.Thread(target=run_tts, daemon=True).start()
+
+    def play_audio(self, filepath):
+        if platform.system() == "Darwin":
+            self.audio_process = subprocess.Popen(["afplay", filepath])
+        elif platform.system() == "Windows":
+            self.audio_process = subprocess.Popen([
+                "powershell", "-c",
+                f"(New-Object Media.SoundPlayer '{filepath}').PlaySync();"
+            ])
+        else:
+            self.audio_process = subprocess.Popen(["mpg123", filepath])
+
+    def stop_audio(self):
+        if self.audio_process:
+            try:
+                self.audio_process.terminate()
+            except Exception as e:
+                print(f"[DEBUG] Could not stop audio: {e}")
+            self.audio_process = None
+
+    def read_original(self):
+        if self.last_original:
+            self.read_text_aloud(self.last_original)
+
+    def read_translated(self):
+        if self.last_translation:
+            self.read_text_aloud(self.last_translation)
