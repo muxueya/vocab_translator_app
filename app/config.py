@@ -1,4 +1,4 @@
-HOTKEY = "ctrl+alt+t"
+HOTKEY = "command+option+t"
 WORD_BOOK_PATH = "data/wordbook.json"
 ANKI_EXPORT_PATH = "data/anki_wordbook.txt"
 DEFAULT_SOURCE_LANG = "auto"
