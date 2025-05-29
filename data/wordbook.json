@@ -30,5 +30,9 @@
   {
     "original": "All GUI changes happen safely in the main thread using pyqtSignal.",
     "translated": "Alla GUI -förändringar sker säkert i huvudtråden med hjälp av pyqtsignal."
+  },
+  {
+    "original": "repetition",
+    "translated": "upprepning"
   }
 ]

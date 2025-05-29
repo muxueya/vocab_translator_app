@@ -1,9 +1,14 @@
 from googletrans import Translator
+from langdetect import detect
 from app.config import DEFAULT_SOURCE_LANG
 
-def translate_text(text):
-    translator = Translator()
-    src = DEFAULT_SOURCE_LANG
-    dest = "en" if any(char in text.lower() for char in "åäö") else "sv"
-    return translator.translate(text, src=src, dest=dest).text
+translator = Translator()
 
+
+def translate_text(text):
+    try:
+        src_lang = detect(text)
+        dest_lang = "en" if src_lang == "sv" else "sv"
+        return translator.translate(text, src=src_lang, dest=dest_lang).text
+    except Exception as e:
+        return f"[Translation Error] {e}"
