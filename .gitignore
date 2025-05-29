@@ -1,4 +1,17 @@
-# .gitignore
-data/*
-!data/.gitkeep
-venv/*
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.mp3
+*.log
+*.tmp
+.env
+.venv
+build/
+dist/
+*.egg-info/
+.DS_Store
+.idea/
+.vscode/
+data/wordbook.json
+data/anki_wordbook.txt
