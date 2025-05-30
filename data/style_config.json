@@ -3,5 +3,9 @@
     "text_color": "#000000",
     "text_size": "20pt",
     "window_color": "#ffffff",
-    "opacity": 0.8
+    "opacity": 1.0,
+    "original_bg_color": "#ffffff",
+    "translation_bg_color": "#F2EBE6",
+    "original_frame_height": 80,
+    "translation_frame_height": 160
 }

@@ -70,7 +70,6 @@ class TranslatorApp(QWidget):
         # New Lexikon button
         self.lexikon_btn = QPushButton("Lexikon")
         self.lexikon_btn.setFixedWidth(100)
-        # Disabled default style
         self.lexikon_btn.setStyleSheet("padding: 6px; border-radius: 5px; background-color: #e0e0e0; color: #a0a0a0;")
         self.lexikon_btn.setEnabled(False)
         self.lexikon_btn.clicked.connect(self.lookup_lexikon)
@@ -114,6 +113,7 @@ class TranslatorApp(QWidget):
 
         self.last_original = ""
         self.last_translation = ""
+        self.current_mode = 'translate'
 
         self.clipboard_text_received.connect(self.process_clipboard_text)
         self.audio_ready.connect(self.play_audio)
@@ -154,6 +154,7 @@ class TranslatorApp(QWidget):
         self.last_translation = translated
         self.original_label.setText(text_cleaned)
         self.translation_label.setText(translated)
+        self.current_mode = 'translate'
         self.update_lexikon_button()
 
     def handle_auto_toggle(self, state):
@@ -168,11 +169,14 @@ class TranslatorApp(QWidget):
         self.last_translation = translated
         self.original_label.setText(text)
         self.translation_label.setText(translated)
+        self.current_mode = 'translate'
         self.update_lexikon_button()
 
     def save_to_wordbook(self):
-        if self.last_original and self.last_translation:
-            save_to_wordbook(self.last_original, self.last_translation)
+        if self.last_original:
+            displayed = self.translation_label.toPlainText().strip()
+            if displayed:
+                save_to_wordbook(self.last_original, displayed)
 
     def export_to_anki(self):
         export_wordbook_to_anki()
@@ -187,6 +191,7 @@ class TranslatorApp(QWidget):
             entry = get_formatted_entry(self.last_original.strip())
             if entry:
                 self.translation_label.setText(entry)
+                self.current_mode = 'lexikon'
         # Otherwise, do nothing
 
     def update_lexikon_button(self):
@@ -203,9 +208,31 @@ class TranslatorApp(QWidget):
             try:
                 with open(APPEARANCE_FILE, 'r', encoding='utf-8') as f:
                     style = json.load(f)
+                # Window background color
                 self.setStyleSheet(f"background-color: {style.get('window_color', '#ffffff')};")
-                self.original_label.setStyleSheet(f"color: {style.get('text_color', '#000000')}; font-size: {style.get('text_size', '12pt')};")
-                self.translation_label.setStyleSheet(f"color: {style.get('text_color', '#000000')}; font-size: {style.get('text_size', '12pt')};")
+
+                # === CHANGES: Per-frame background colors from config ===
+                orig_bg = style.get('original_bg_color', '#ffffff')  # added config key
+                trans_bg = style.get('translation_bg_color', '#ffffff')  # added config key
+                common_style = (
+                    f"color: {style.get('text_color', '#000000')}; "
+                    f"font-size: {style.get('text_size', '12pt')};"
+                )
+                self.original_label.setStyleSheet(
+                    f"background-color: {orig_bg}; {common_style}"
+                )  # applied original_bg_color
+                self.translation_label.setStyleSheet(
+                    f"background-color: {trans_bg}; {common_style}"
+                )  # applied translation_bg_color
+                orig_h = style.get('original_frame_height')  # added config key
+                if orig_h is not None:
+                    self.original_label.setFixedHeight(orig_h)
+                trans_h = style.get('translation_frame_height')  # added config key
+                if trans_h is not None:
+                    self.translation_label.setFixedHeight(trans_h)                
+                # === END CHANGES ===
+
+                # Opacity and max length remain
                 self.setWindowOpacity(style.get('opacity', 1.0))
                 self.max_text_length = style.get('max_text_length', 2000)
             except Exception as e:

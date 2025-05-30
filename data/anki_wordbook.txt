@@ -4,3 +4,112 @@ Error messages shown in a QMessageBox if saving fails (e.g., due to a corrupted 
 Let me know if you'd like the app to confirm successful export with a popup as well.	Låt mig veta om du vill att appen också ska bekräfta framgångsrik export med en popup.
 Fixed: The "Export to Anki" button now works correctly without crashing.	Fast: "Exportera till Anki" -knappen fungerar nu korrekt utan att krascha.
 Fixed: The "Export to Anki" button now works correctly without crashing.	Fast: "Exportera till Anki" -knappen fungerar nu korrekt utan att krascha.
+Would you like help integrating a proper main.py entry point using QApplication and TranslatorApp cleanly?	Vill du hjälpa till att integrera en ordentlig main.py -ingångspunkt med QApplication och TranslatorApp rent?
+All GUI changes happen safely in the main thread using pyqtSignal.	Alla GUI -förändringar sker säkert i huvudtråden med hjälp av pyqtsignal.
+repetition	upprepning
+knark	dope
+knark	dope
+olämpligt	olämplig
+  adjective,
+  unsuitable
+  ,
+  inappropriate
+  Pronunciation: [²'o:lem:plig]
+  Inflections:  olämpligt, olämpliga
+  Synonyms: opassande
+  Definition: inte lämplig, inte passande
+  Example: en olämplig tidpunkt (an unsuitable time)
+bara	välsigna
+välsigna	välsigna
+  verb (även allmänt " prisa, vara glad över"),
+  bless
+  [also commonly " praise, be happy about"]
+  Grammar comment: A & B/x
+  Pronunciation: [vels'ing:nar]
+  Inflections:  välsignade, välsignat, välsigna, välsignar
+  Definition: be Gud beskydda
+
+minsters
+  ,
+  välsigna
+välsigna	ur fältet
+Samhälle	society
+  noun,
+  Samhälle
+  ,
+  samhällsgrupp
+  Variant: community
+  Explanation: Society A general social unit where people live together. Can be divided into different communities.
+program	program
+  noun,
+  programme
+  ,
+  (program [US])
+  Pronunciation: [progr'am:]
+  Inflections:  programmet, program, programmen
+  Synonyms: agenda, dagordning, schema
+  Definition: (skriven) plan över hur något skall genomföras
+  Example: vad står på programmet i kväll? (what is on the programme this evening?),
+  ett trafikpolitiskt program (a traffic policy programme)
+  Compounds: teaterprogram (theatre programme),
+  partiprogram (party programme),
+  program|skrift (party manifesto),
+  hjälpprogram (aid programme)
+
+bill
+  noun,
+  affisch
+  ,
+  anslag
+  ,
+  program
+  Explanation: stort anslag, plakat
+
+card
+  noun,
+  program
+  ,
+  lista
+  ,
+  meddelande
+
+program
+  noun,
+  program
+  [data],
+  dagordning
+
+program
+  noun,
+  program
+  ,
+  kurs
+  ,
+  plan
+  ,
+  läroplan
+  [amerikansk engelska, i brittisk engelska programme]
+
+programme
+  noun,
+  program
+  ,
+  kurs
+  ,
+  plan
+  ,
+  läroplan
+  [brittisk engelska, i amerikansk engelska program]
+  Explanation: a kind of unit *trust
+
+ticket
+  noun,
+  program
+  [American English],
+  partiprogram
+  [American English]
+
+programmes
+  ,
+  program
+Click on the image to pick a color	Klicka på bilden för att välja en färg
