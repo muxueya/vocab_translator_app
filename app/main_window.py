@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QCheckBox, QMessageBox, QMenuBar, QAction, QTextEdit, QSizePolicy, QScrollArea
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QCheckBox, QMessageBox, QMenuBar, QAction, QTextEdit, QSizePolicy
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal
 import pyperclip
 import json
@@ -10,14 +10,14 @@ import tempfile
 import platform
 import threading
 from langdetect import detect
-from app.translator import translate_text
+from app.translator import translate_text, get_formatted_entry
 from app.storage import save_to_wordbook, export_wordbook_to_anki
 from app.clipboard_monitor import ClipboardMonitor
 from app.config import APPEARANCE_FILE
 
 class TranslatorApp(QWidget):
     clipboard_text_received = pyqtSignal(str)
-    audio_ready = pyqtSignal(str)  # ✅ Signal to play audio in main thread
+    audio_ready = pyqtSignal(str)
 
     def __init__(self):
         super().__init__()
@@ -31,7 +31,7 @@ class TranslatorApp(QWidget):
 
         self.menu_bar = QMenuBar(self)
         file_menu = self.menu_bar.addMenu("Options")
-
+        
         appearance_action = QAction("Change Appearance", self)
         appearance_action.triggered.connect(self.open_appearance_file)
         file_menu.addAction(appearance_action)
@@ -67,6 +67,14 @@ class TranslatorApp(QWidget):
         self.copy_translated_btn.setStyleSheet("padding: 6px; border-radius: 5px; background-color: #e0e0e0;")
         self.copy_translated_btn.clicked.connect(self.copy_translated_text)
 
+        # New Lexikon button
+        self.lexikon_btn = QPushButton("Lexikon")
+        self.lexikon_btn.setFixedWidth(100)
+        # Disabled default style
+        self.lexikon_btn.setStyleSheet("padding: 6px; border-radius: 5px; background-color: #e0e0e0; color: #a0a0a0;")
+        self.lexikon_btn.setEnabled(False)
+        self.lexikon_btn.clicked.connect(self.lookup_lexikon)
+
         self.save_btn = QPushButton("Save")
         self.save_btn.setFixedWidth(100)
         self.save_btn.setStyleSheet("padding: 6px; border-radius: 5px; background-color: #e0e0e0;")
@@ -84,6 +92,7 @@ class TranslatorApp(QWidget):
 
         button_layout.addWidget(self.copy_translate_btn)
         button_layout.addWidget(self.copy_translated_btn)
+        button_layout.addWidget(self.lexikon_btn)
         button_layout.addWidget(self.save_btn)
         button_layout.addWidget(self.read_original_btn)
         button_layout.addWidget(self.read_translated_btn)
@@ -107,12 +116,14 @@ class TranslatorApp(QWidget):
         self.last_translation = ""
 
         self.clipboard_text_received.connect(self.process_clipboard_text)
-        self.audio_ready.connect(self.play_audio)  # ✅ Connect signal to play audio
+        self.audio_ready.connect(self.play_audio)
         self.clipboard_monitor = ClipboardMonitor(self.handle_clipboard_translation)
         self.clipboard_monitor.start()
 
         self.apply_appearance()
         self.max_text_length = 2000
+        # Initialize lexikon button state
+        self.update_lexikon_button()
 
     def handle_manual_translate(self):
         try:
@@ -143,6 +154,7 @@ class TranslatorApp(QWidget):
         self.last_translation = translated
         self.original_label.setText(text_cleaned)
         self.translation_label.setText(translated)
+        self.update_lexikon_button()
 
     def handle_auto_toggle(self, state):
         if state == Qt.Checked:
@@ -156,6 +168,7 @@ class TranslatorApp(QWidget):
         self.last_translation = translated
         self.original_label.setText(text)
         self.translation_label.setText(translated)
+        self.update_lexikon_button()
 
     def save_to_wordbook(self):
         if self.last_original and self.last_translation:
@@ -167,6 +180,23 @@ class TranslatorApp(QWidget):
     def copy_translated_text(self):
         if self.last_translation:
             pyperclip.copy(self.last_translation)
+
+    def lookup_lexikon(self):
+        # Only lookup when single word
+        if self.last_original and len(self.last_original.split()) == 1:
+            entry = get_formatted_entry(self.last_original.strip())
+            if entry:
+                self.translation_label.setText(entry)
+        # Otherwise, do nothing
+
+    def update_lexikon_button(self):
+        # Enable only for single-word original text
+        if self.last_original and len(self.last_original.split()) == 1:
+            self.lexikon_btn.setEnabled(True)
+            self.lexikon_btn.setStyleSheet("padding: 6px; border-radius: 5px; background-color: skyblue; color: white;")
+        else:
+            self.lexikon_btn.setEnabled(False)
+            self.lexikon_btn.setStyleSheet("padding: 6px; border-radius: 5px; background-color: #e0e0e0; color: #a0a0a0;")
 
     def apply_appearance(self):
         if os.path.exists(APPEARANCE_FILE):
@@ -204,7 +234,7 @@ class TranslatorApp(QWidget):
                 with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
                     self.audio_file = tmp.name
                     asyncio.run(communicate.save(self.audio_file))
-                self.audio_ready.emit(self.audio_file)  # ✅ Safe call in main thread
+                self.audio_ready.emit(self.audio_file)
             except Exception as e:
                 print(f"[TTS ERROR] {e}")
 

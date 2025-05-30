@@ -49,15 +49,11 @@ def get_formatted_entry(word):
 
 def translate_text(text):
     """
-    Detect language and translate text. For single Swedish words, use Folkets lookup.
+    Detect language and translate text using Google Translate.
     """
     try:
         src = detect(text)
         dest = 'en' if src == 'sv' else 'sv'
-        if src == 'sv' and len(text.strip().split()) == 1:
-            entry = get_formatted_entry(text.strip())
-            if entry:
-                return entry
         return translator.translate(text, src=src, dest=dest).text
     except Exception as e:
         return f"[Error] {e}"

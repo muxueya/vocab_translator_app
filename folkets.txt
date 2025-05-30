@@ -1,0 +1,117 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript" type="text/javascript">
+  function playAudio(url) {
+     var a = new Audio(url);
+     a.play();
+  }
+</script>
+<title>Folkets service: mörda</title></head>
+<body>
+<P><img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>mörda</b> verb, <img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>murder</b><br>Grammatikkommentar: A & B<br>Uttal: [²m'ö:r_dar] <a title="Lyssna" href="#" onclick="playAudio('http://lexin.nada.kth.se/sound/m0366rdar.mp3');return false;"><img src="grafik/sound.gif" class="soundimage"></a> <a title="Ladda ner uttalet" href="http://lexin.nada.kth.se/sound/m0366rdar.mp3"><img src="grafik/download-11x11.png"></a><br>Böjningar:  mördade, mördat, mörda, mördar<br>Synonymer: dräpa, döda, ha ihjäl, slå ihjäl<br>Definition: begå mord (på), avsiktligt döda<br>Exempel: statsministern mördades på öppen gata (the prime minister was murdered on the street)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>dispatch</b> verb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>mörda</b>, <b>döda</b>, <b>likvidera</b>, <b>göra av med</b> [eufemism]<br>Grammatikkommentar: transitivt</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>do for</b> verb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>mörda</b> [brittisk engelska, slanguttryck]<br>Grammatikkommentar: transitivt<br>Böjningar:  did for,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  done for</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>do in</b> verb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>mörda</b> [slanguttryck]<br>Grammatikkommentar: transitivt<br>Böjningar:  did in,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  done in<br>Exempel: they have done him in (de har tagit livet av honom)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>kill</b> verb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>döda</b>, <b>mörda</b>, <b>dräpa</b><br>Grammatikkommentar: intransitivt</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>kill</b> verb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>döda</b>, <b>mörda</b>, <b>ta livet av</b>, <b>slå ihjäl</b>, <b>ta kål på</b>, <b>dräpa</b><br>Grammatikkommentar: transitivt<br>Idiom: kill the goose that lays the golden eggs ((ordspråk) döda hönan som värper guldägg),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kill onself doing something (förta sig i det man gör något, anstränga sig för mycket att göra något),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kill time (fördriva tiden, få tiden att gå),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kill two birds with one stone (slå två flugor i en smäll),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kill somebody with kindness (klema med någon (för mycket)),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; it will kill or cure (det kommer att bära eller brista)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>knock off</b> verb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>mörda</b> [slanguttryck], <b>knäppa</b><br>Grammatikkommentar: transitivt</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>murder</b> verb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>begå mord</b>, <b>mörda</b><br>Grammatikkommentar: intransitivt</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>murder</b> verb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>mörda</b><br>Grammatikkommentar: transitivt</P>
+
+</body></html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript" type="text/javascript">
+  function playAudio(url) {
+     var a = new Audio(url);
+     a.play();
+  }
+</script>
+<title>Folkets service: häkte</title></head>
+<body>
+<P><img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>häkte</b> substantiv, <img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>remand prison</b><br>Uttal: [²h'ek:te] <a title="Lyssna" href="#" onclick="playAudio('http://lexin.nada.kth.se/sound/h0344kte.mp3');return false;"><img src="grafik/sound.gif" class="soundimage"></a> <a title="Ladda ner uttalet" href="http://lexin.nada.kth.se/sound/h0344kte.mp3"><img src="grafik/download-11x11.png"></a><br>Böjningar:  häktet, häkten, häktena<br>Definition: (rannsaknings)fängelse för häktade personer (the prison in which persons remanded in custody are held)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>gaol</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>arrest</b>, <b>häkte</b>, <b>fängelse</b> [brittisk engelska, i amerikansk engelska jail]</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>jail</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>arrest</b> [amerikansk engelska, i brittisk engelska gaol], <b>fängelse</b>, <b>häkte</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>police custody</b> , <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>polisförvar</b>, <b>z</b>, <b>häkte</b>, <b>polisf?rvar</b>, <b>häkte </b>, <b>yttersta</b></P>
+
+</body></html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript" type="text/javascript">
+  function playAudio(url) {
+     var a = new Audio(url);
+     a.play();
+  }
+</script>
+<title>Folkets service: försöker</title></head>
+<body>
+<P><img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>försöka</b> verb, <img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>try</b>, <b>attempt</b><br>Grammatikkommentar: A & + INF<br>Uttal: [för_s'ö:ker] <a title="Lyssna" href="#" onclick="playAudio('http://lexin.nada.kth.se/sound/f0366rs0366ker.mp3');return false;"><img src="grafik/sound.gif" class="soundimage"></a> <a title="Ladda ner uttalet" href="http://lexin.nada.kth.se/sound/f0366rs0366ker.mp3"><img src="grafik/download-11x11.png"></a><br>Böjningar:  försökte, försökt, försök, försöka, försöker<br>Synonymer: prova, pröva, testa<br>Definition: anstränga sig att åstadkomma något<br>Exempel: han försöker visa vad han kan (he tries to show what he can do)</P>
+
+</body></html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript" type="text/javascript">
+  function playAudio(url) {
+     var a = new Audio(url);
+     a.play();
+  }
+</script>
+<title>Folkets service: hus</title></head>
+<body>
+<P><img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>hus</b> substantiv, <img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>building</b>, <b>house</b><br>Uttal: [hu:s] <a title="Lyssna" href="#" onclick="playAudio('http://lexin.nada.kth.se/sound/hus.mp3');return false;"><img src="grafik/sound.gif" class="soundimage"></a> <a title="Ladda ner uttalet" href="http://lexin.nada.kth.se/sound/hus.mp3"><img src="grafik/download-11x11.png"></a><br>Böjningar:  huset, hus, husen<br>Synonymer: boning, byggnad, där man bor, hydda, kåk, lya, residens, villa<br>Definition: utrymme där människor, bor, vistas el. förvarar saker (a building in which people live or store things)<br>Idiom: Folkets hus (&quot;byggnad med allmänna samlingslokaler&quot;) (People&#39;s Hall (&quot;building housing public meeting halls, etc.&quot;)),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hålla hus (&quot;befinna sig&quot;) (be (&quot;where&#39;ve you been hiding?&quot;))<br>Sammansättningar: sjukhus (hospital),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; radhus (terrace house),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stenhus (stone (brick) house),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fritidshus (weekend cottage),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; växthus (greenhouse),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varuhus (department store)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>building</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>byggnation</b>, <b>byggnad</b>, <b>hus</b>, <b>anläggning</b>, <b>byggnadsverksamhet</b>, <b>byggande</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>case</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>hölje</b>, <b>hylsa</b>, <b>kapsel</b>, <b>slida</b>, <b>huv</b>, <b>mantel</b>, <b>hus</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>home</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>hem</b>, <b>hemvist</b>, <b>bostad</b>, <b>hemort</b>, <b>hembygd</b>, <b>hemland</b>, <b>villa</b>, <b>hus</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>house</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>elevhem</b>, <b>hus</b> [på internatskola]</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>house</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>hus</b> [astrologiskt]<br>Grammatikkommentar: House i namn<br>Exempel: the House of the Lion (Lejonet)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>house</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>hus</b> [om de personer som bor i ett hus]<br>Exempel: you woke up the whole house last night (du/ni väckte hela huset i natt)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>house</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>hus</b><br>Exempel: my husband and I just bought a house (min man och jag har precis köpt hus)<br>Idiom: bring the house down (riva ned stormande applåder),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get on like a house on fire (snabbt bli goda vänner/finna varandra direkt),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; keep house (sköta ett hushåll),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; move house (flytta till ett annat hus (särskilt brittisk engelska)),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my house is my castle (mitt hem är min borg)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>housing</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>hus</b> [teknik], <b>inskärning</b>, <b>urtagning</b>, <b>intappning</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>housing</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>bostäder</b>, <b>byggnader</b>, <b>hus</b>, <b>bostadsförhållanden</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>place</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>hus</b> [vardaglig stil], <b>bostad</b>, <b>ställe</b>, <b>hem</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>shell</b> substantiv, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>skal</b>, <b>musselskal</b>, <b>snäckskal</b>, <b>snäcka</b>, <b>mussla</b>, <b>hus</b>, <b>snigelhus</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>houses</b> , <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>hus</b></P>
+
+</body></html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript" type="text/javascript">
+  function playAudio(url) {
+     var a = new Audio(url);
+     a.play();
+  }
+</script>
+<title>Folkets service: också</title></head>
+<body>
+<P><img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>också</b> adverb, <img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>too</b>, <b>also</b><br>Uttal: [²'åk:så] <a title="Lyssna" href="#" onclick="playAudio('http://lexin.nada.kth.se/sound/ocks0345.mp3');return false;"><img src="grafik/sound.gif" class="soundimage"></a> <a title="Ladda ner uttalet" href="http://lexin.nada.kth.se/sound/ocks0345.mp3"><img src="grafik/download-11x11.png"></a><br>Synonymer: likaså, samt, även<br>Definition: även, dessutom<br>Exempel: inte bara jag utan också min fru spelar fiol (I play the violin and my wife does as well),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jag spelar fiol också (I play the violin as well),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jag ska också gå nu (I, too, will go out now)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>also</b> adverb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>även</b>, <b>också</b>, <b>likaså</b>, <b>dessutom</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>too</b> adverb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>också</b>, <b>med</b>, <b>även</b>, <b>dessutom</b>, <b>därjämte</b>, <b>därtill</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>blacklisting</b> , <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>svartlistning</b>, <b>svartlista</b>, <b>Svartlistad</b>, <b>också</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>calamus</b> , <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>skeptisk</b>, <b>Också</b>, <b>arbiska</b>, <b>plattfot</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>bantam</b> , <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>Också</b></P>
+
+</body></html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript" type="text/javascript">
+  function playAudio(url) {
+     var a = new Audio(url);
+     a.play();
+  }
+</script>
+<title>Folkets service: tillräckligt</title></head>
+<body>
+<P><img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>tillräcklig</b> adjektiv (som adverb även &quot; nog&quot), <img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>sufficient</b> [verb], <b>enough</b><br>Uttal: [²t'il:rek:lig] <a title="Lyssna" href="#" onclick="playAudio('http://lexin.nada.kth.se/sound/http://lexin.nada.kth.se/sound/tillr0344cklig.mp3');return false;"><img src="grafik/sound.gif" class="soundimage"></a> <a title="Ladda ner uttalet" href="http://lexin.nada.kth.se/sound/http://lexin.nada.kth.se/sound/tillr0344cklig.mp3"><img src="grafik/download-11x11.png"></a><br>Böjningar:  tillräckligt, tillräckliga<br>Synonymer: fullgod, lagom, nog<br>Definition: som räcker till<br>Exempel: ha tillräckligt med bensin (have enough petrol),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tillräckligt ofta (often enough),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tillräckliga resurser (adequate resources)</P>
+<P><img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>tillräckligt</b> , <img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>enough</b></P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>enough</b> adjektiv, substantiv, adverb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>nog</b>, <b>tillräckligt</b><br>Exempel: the food will not be enough for more than four people (maten räcker inte till mer än fyra),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now that&#39;s enough of your insolence! (nu får det räcka med oförskämdheter!),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; there is not enough money (pengarna räcker inte till)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>plenty</b> adverb (informellt), <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>alldeles</b>, <b>tillräckligt</b><br>Exempel: this is plenty thick now (den är tillräckligt tjock nu)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>plenty</b> pronomen, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>tillräcklig</b>, <b>tillräckligt</b><br>Exempel: I have two potatoes, and that&#39;s plenty, thank you (jag har två potatisar och det räcker, tack)</P>
+<P><img src="grafik/flag_18x12_en.png" width=18 height=12 alt="(Engelska)"/> <b>sufficiently</b> adverb, <img src="grafik/flag_18x12_sv.png" width=18 height=12 alt="(Svenska)"/> <b>tillräckligt</b> [ganska formellt]</P>
+
+</body></html>
+
