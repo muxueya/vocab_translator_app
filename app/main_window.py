@@ -34,6 +34,27 @@ class LexikonWorker(QThread):
         except Exception as e:
             self.error.emit(str(e))
 
+class TTSWorker(QThread):
+    audio_ready = pyqtSignal(str)
+    error = pyqtSignal(str)
+
+    def __init__(self, text, voice):
+        super().__init__()
+        self.text = text
+        self.voice = voice
+
+    def run(self):
+        try:
+            # reuse a single asyncio loop by creating one at module level or use get_event_loop()
+            communicate = edge_tts.Communicate(self.text, self.voice)
+            # save to temporary file
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
+                filepath = tmp.name
+            asyncio.run(communicate.save(filepath))
+            self.audio_ready.emit(filepath)
+        except Exception as e:
+            self.error.emit(str(e))
+
 class TranslatorApp(QWidget):
     clipboard_text_received = pyqtSignal(str)
     audio_ready = pyqtSignal(str)
@@ -284,18 +305,13 @@ class TranslatorApp(QWidget):
         if self.audio_process:
             self.stop_audio()
             return
+        
+        # start TTS in a dedicated QThread worker
+        self.tts_worker = TTSWorker(text, voice)
+        self.tts_worker.audio_ready.connect(self.play_audio)
+        self.tts_worker.error.connect(lambda msg: print(f"[TTS ERROR] {msg}"))
+        self.tts_worker.start()
 
-        def run_tts():
-            try:
-                communicate = edge_tts.Communicate(text, voice)
-                with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
-                    self.audio_file = tmp.name
-                    asyncio.run(communicate.save(self.audio_file))
-                self.audio_ready.emit(self.audio_file)
-            except Exception as e:
-                print(f"[TTS ERROR] {e}")
-
-        threading.Thread(target=run_tts, daemon=True).start()
 
     def play_audio(self, filepath):
         if platform.system() == "Darwin":
