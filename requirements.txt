@@ -1,5 +1,7 @@
-PyQt5
-pyperclip
+PyQt5>=5.15.0
+pyperclip>=1.8.2
+langdetect>=1.0.9
 googletrans==4.0.0-rc1
-edge-tts
-langdetect
+beautifulsoup4>=4.11.1
+requests>=2.28.1
+edge-tts>=1.2.2
