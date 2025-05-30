@@ -14,6 +14,25 @@ from app.translator import translate_text, get_formatted_entry
 from app.storage import save_to_wordbook, export_wordbook_to_anki
 from app.clipboard_monitor import ClipboardMonitor
 from app.config import APPEARANCE_FILE
+from PyQt5.QtCore import QThread, pyqtSignal
+
+class LexikonWorker(QThread):
+    entry_ready = pyqtSignal(str)
+    error = pyqtSignal(str)
+
+    def __init__(self, word):
+        super().__init__()
+        self.word = word
+
+    def run(self):
+        try:
+            entry = get_formatted_entry(self.word)
+            if entry:
+                self.entry_ready.emit(entry)
+            else:
+                self.error.emit("No entry found.")
+        except Exception as e:
+            self.error.emit(str(e))
 
 class TranslatorApp(QWidget):
     clipboard_text_received = pyqtSignal(str)
@@ -28,6 +47,7 @@ class TranslatorApp(QWidget):
 
         self.audio_process = None
         self.audio_file = None
+        self.lexikon_worker = None
 
         self.menu_bar = QMenuBar(self)
         file_menu = self.menu_bar.addMenu("Options")
@@ -188,11 +208,21 @@ class TranslatorApp(QWidget):
     def lookup_lexikon(self):
         # Only lookup when single word
         if self.last_original and len(self.last_original.split()) == 1:
-            entry = get_formatted_entry(self.last_original.strip())
-            if entry:
-                self.translation_label.setText(entry)
-                self.current_mode = 'lexikon'
+            self.lexikon_btn.setEnabled(False)
+            # Start background worker
+            self.lexikon_worker = LexikonWorker(self.last_original.strip())
+            self.lexikon_worker.entry_ready.connect(self.on_lexikon_ready)
+            self.lexikon_worker.error.connect(self.on_lexikon_error)
+            self.lexikon_worker.finished.connect(lambda: self.lexikon_btn.setEnabled(True))
+            self.lexikon_worker.start()
         # Otherwise, do nothing
+
+    def on_lexikon_ready(self, entry):
+        self.translation_label.setText(entry)
+        self.current_mode = 'lexikon'
+
+    def on_lexikon_error(self, message):
+        QMessageBox.warning(self, "Lexikon Error", f"Failed to fetch entry: {message}")
 
     def update_lexikon_button(self):
         # Enable only for single-word original text
