@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QCheckBox, QMessageBox, QMenuBar, QAction, QTextEdit, QSizePolicy
-from PyQt5.QtCore import Qt, QTimer, pyqtSignal
+from PyQt5.QtCore import Qt, QThread, pyqtSignal
 import pyperclip
 import json
 import os
@@ -8,13 +8,12 @@ import asyncio
 import edge_tts
 import tempfile
 import platform
-import threading
 from langdetect import detect
 from app.translator import translate_text, get_formatted_entry
 from app.storage import save_to_wordbook, export_wordbook_to_anki
 from app.clipboard_monitor import ClipboardMonitor
 from app.config import APPEARANCE_FILE
-from PyQt5.QtCore import QThread, pyqtSignal
+
 
 class LexikonWorker(QThread):
     entry_ready = pyqtSignal(str)
