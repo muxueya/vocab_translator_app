@@ -259,33 +259,39 @@ class TranslatorApp(QWidget):
             try:
                 with open(APPEARANCE_FILE, 'r', encoding='utf-8') as f:
                     style = json.load(f)
-                # Window background color
+
+                # Window
                 self.setStyleSheet(f"background-color: {style.get('window_color', '#ffffff')};")
-
-                # === CHANGES: Per-frame background colors from config ===
-                orig_bg = style.get('original_bg_color', '#ffffff')  # added config key
-                trans_bg = style.get('translation_bg_color', '#ffffff')  # added config key
-                common_style = (
-                    f"color: {style.get('text_color', '#000000')}; "
-                    f"font-size: {style.get('text_size', '12pt')};"
-                )
-                self.original_label.setStyleSheet(
-                    f"background-color: {orig_bg}; {common_style}"
-                )  # applied original_bg_color
-                self.translation_label.setStyleSheet(
-                    f"background-color: {trans_bg}; {common_style}"
-                )  # applied translation_bg_color
-                orig_h = style.get('original_frame_height')  # added config key
-                if orig_h is not None:
-                    self.original_label.setFixedHeight(orig_h)
-                trans_h = style.get('translation_frame_height')  # added config key
-                if trans_h is not None:
-                    self.translation_label.setFixedHeight(trans_h)                
-                # === END CHANGES ===
-
-                # Opacity and max length remain
                 self.setWindowOpacity(style.get('opacity', 1.0))
                 self.max_text_length = style.get('max_text_length', 2000)
+
+                # === ORIGINAL TEXT AREA ===
+                orig_bg    = style.get('original_bg_color', '#ffffff')
+                orig_color = style.get('original_text_color', '#000000')
+                orig_size  = style.get('original_text_size', '12pt')
+                orig_h     = style.get('original_frame_height', None)
+                orig_style = (
+                    f"background-color: {orig_bg}; "
+                    f"color: {orig_color}; "
+                    f"font-size: {orig_size};"
+                )
+                self.original_label.setStyleSheet(orig_style)
+                if orig_h is not None:
+                    self.original_label.setFixedHeight(orig_h)
+
+                # === TRANSLATION TEXT AREA ===
+                trans_bg    = style.get('translation_bg_color', '#ffffff')
+                trans_color = style.get('translation_text_color', '#000000')
+                trans_size  = style.get('translation_text_size', '12pt')
+                trans_h     = style.get('translation_frame_height', None)
+                trans_style = (
+                    f"background-color: {trans_bg}; "
+                    f"color: {trans_color}; "
+                    f"font-size: {trans_size};"
+                )
+                self.translation_label.setStyleSheet(trans_style)
+                if trans_h is not None:
+                    self.translation_label.setFixedHeight(trans_h)
             except Exception as e:
                 QMessageBox.warning(self, "Appearance Error", f"Failed to apply appearance: {e}")
 
