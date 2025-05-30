@@ -13,6 +13,7 @@ from app.translator import translate_text, get_formatted_entry
 from app.storage import save_to_wordbook, export_wordbook_to_anki
 from app.clipboard_monitor import ClipboardMonitor
 from app.config import APPEARANCE_FILE
+from app.config import AUTO_TRANSLATE_ON_COPY
 
 
 class LexikonWorker(QThread):
@@ -137,7 +138,7 @@ class TranslatorApp(QWidget):
         button_layout.addWidget(self.read_translated_btn)
 
         self.auto_check = QCheckBox("Auto-translate on copy")
-        self.auto_check.setChecked(False)
+        self.auto_check.setChecked(AUTO_TRANSLATE_ON_COPY)
         self.auto_check.stateChanged.connect(self.handle_auto_toggle)
 
         layout = QVBoxLayout()
