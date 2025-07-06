@@ -1,115 +1,26 @@
-Safe fallback when wordbook.json is empty or malformed	Säker fallback när wordbook.json är tom eller missbildad
-Safe fallback when wordbook.json is empty or malformed	Säker fallback när wordbook.json är tom eller missbildad
-Error messages shown in a QMessageBox if saving fails (e.g., due to a corrupted or missing file)	Felmeddelanden som visas i en QMessageBox om du sparar misslyckas (t.ex. på grund av en skadad eller saknad fil)
-Let me know if you'd like the app to confirm successful export with a popup as well.	Låt mig veta om du vill att appen också ska bekräfta framgångsrik export med en popup.
-Fixed: The "Export to Anki" button now works correctly without crashing.	Fast: "Exportera till Anki" -knappen fungerar nu korrekt utan att krascha.
-Fixed: The "Export to Anki" button now works correctly without crashing.	Fast: "Exportera till Anki" -knappen fungerar nu korrekt utan att krascha.
-Would you like help integrating a proper main.py entry point using QApplication and TranslatorApp cleanly?	Vill du hjälpa till att integrera en ordentlig main.py -ingångspunkt med QApplication och TranslatorApp rent?
-All GUI changes happen safely in the main thread using pyqtSignal.	Alla GUI -förändringar sker säkert i huvudtråden med hjälp av pyqtsignal.
-repetition	upprepning
-knark	dope
-knark	dope
-olämpligt	olämplig
-  adjective,
-  unsuitable
-  ,
-  inappropriate
-  Pronunciation: [²'o:lem:plig]
-  Inflections:  olämpligt, olämpliga
-  Synonyms: opassande
-  Definition: inte lämplig, inte passande
-  Example: en olämplig tidpunkt (an unsuitable time)
-bara	välsigna
-välsigna	välsigna
-  verb (även allmänt " prisa, vara glad över"),
-  bless
-  [also commonly " praise, be happy about"]
-  Grammar comment: A & B/x
-  Pronunciation: [vels'ing:nar]
-  Inflections:  välsignade, välsignat, välsigna, välsignar
-  Definition: be Gud beskydda
-
-minsters
-  ,
-  välsigna
-välsigna	ur fältet
-Samhälle	society
-  noun,
-  Samhälle
-  ,
-  samhällsgrupp
-  Variant: community
-  Explanation: Society A general social unit where people live together. Can be divided into different communities.
-program	program
-  noun,
-  programme
-  ,
-  (program [US])
-  Pronunciation: [progr'am:]
-  Inflections:  programmet, program, programmen
-  Synonyms: agenda, dagordning, schema
-  Definition: (skriven) plan över hur något skall genomföras
-  Example: vad står på programmet i kväll? (what is on the programme this evening?),
-  ett trafikpolitiskt program (a traffic policy programme)
-  Compounds: teaterprogram (theatre programme),
-  partiprogram (party programme),
-  program|skrift (party manifesto),
-  hjälpprogram (aid programme)
-
-bill
-  noun,
-  affisch
-  ,
-  anslag
-  ,
-  program
-  Explanation: stort anslag, plakat
-
-card
-  noun,
-  program
-  ,
-  lista
-  ,
-  meddelande
-
-program
-  noun,
-  program
-  [data],
-  dagordning
-
-program
-  noun,
-  program
-  ,
-  kurs
-  ,
-  plan
-  ,
-  läroplan
-  [amerikansk engelska, i brittisk engelska programme]
-
-programme
-  noun,
-  program
-  ,
-  kurs
-  ,
-  plan
-  ,
-  läroplan
-  [brittisk engelska, i amerikansk engelska program]
-  Explanation: a kind of unit *trust
-
-ticket
-  noun,
-  program
-  [American English],
-  partiprogram
-  [American English]
-
-programmes
-  ,
-  program
-Click on the image to pick a color	Klicka på bilden för att välja en färg
+#separator:Tab
+#columns:Word	Definition
+#notetype:Basic
+#deck:Vocabulary
+beviljat	bevilja<br>  verb,<br>  grant<br>  ,<br>  allow<br>  ,<br>  award<br>  Grammar comment: A & x<br>  Pronunciation: [bev'il:jar]<br>  Inflections:  beviljade, beviljat, bevilja, beviljar<br>  Synonyms: godkänna, låta, medgiva, tillåta<br>  Definition: gå med på, medge<br>  Example: bevilja ledighet (grant leave)
+händer	hand<br>  noun,<br>  hand<br>  Pronunciation: [han:d]<br>  Inflections:  handen, händer<br>  Synonyms: labb<br>  Definition: yttersta delen av en människas arm (the terminal part of the upper limb of humans and other primates)<br>  Example: sy för hand (sew by hand),<br>  gå hand i hand (walk hand in hand),<br>  tvätta händerna (wash one's hands)<br>  Idiom: på egen hand ("själv") (by oneself),<br>  efter hand ("fortlöpande") (gradually, by degrees ("continuously")),<br>  ha till hands ("ha klart till användning") (have at hand ("have available and ready for use")),<br>  i första hand ("viktigast, främst") (in the first place, preferably),<br>  ta hand om ("vårda o dyl") (take care of ("look after, etc."))<br>  Compounds: hand|bagage (hand luggage)
+lutning	lutning<br>  noun,<br>  treatment with lye<br>  Pronunciation: [²l'u:tning]<br>  Inflections:  lutningen, lutningar<br>  Synonyms: backe, sluttning<br>  Definition: det att luta; sluttning<br><br>banking<br>  noun,<br>  skevning<br>  [flygplan],<br>  bankning<br>  ,<br>  lutning<br><br>dip<br>  noun,<br>  sänka<br>  ,<br>  nedgång<br>  ,<br>  svacka<br>  ,<br>  dalning<br>  ,<br>  lutning<br><br>downgrade<br>  noun,<br>  lutning<br>  [särskilt på väg]<br><br>grade<br>  noun,<br>  sluttning<br>  [i synnerhet amerikansk engelska],<br>  lutning<br>  ,<br>  stigning<br>  ,<br>  backe<br><br>gradient<br>  noun,<br>  stigning<br>  ,<br>  lutning<br>  ,<br>  lutningsgrad<br>  ,<br>  stigningsgrad<br>  ,<br>  sluttning<br>  [konkret],<br>  backe<br>  ,<br>  stigning<br><br>inclination<br>  noun,<br>  lutning<br>  ,<br>  sluttning<br>  ,<br>  böjning<br>  ,<br>  stigning<br><br>incline<br>  noun,<br>  sluttning<br>  ,<br>  lutning<br>  ,<br>  stigning<br><br>rake<br>  noun,<br>  lutning<br>  Example: the rake of a mast (en masts lutning)<br><br>slope<br>  noun,<br>  lutning<br>  ,<br>  resning<br>  ,<br>  dosering<br>  [teknik],<br>  stigning<br><br>tilt<br>  noun,<br>  lutning<br>  Idiom: (at) full tilt (i full fart (informellt))
+mått	measure
+slags	sort of
+förändring	förändring<br>  noun,<br>  change<br>  Pronunciation: [för'en:dring]<br>  Inflections:  förändringen, förändringar<br>  Synonyms: mutation, ombildning, ombyte, omställning, omvandling, omväxling, skifte, skiftning, transformation, vändpunkt, växling, ändring<br>  Definition: ändring, förvandling<br>  Example: samhället har genomgått stora förändringar (society has changed a great deal)<br>  Compounds: klimatförändring (climate change),<br>  åldersförändring (change with age),<br>  synförändring (change in sight),<br>  attitydförändring (change of attitude)<br><br>alteration<br>  noun,<br>  förändring<br>  ,<br>  ändring<br>  ,<br>  modifiering<br>  Example: we'll have to make a few alterations in our plans for tomorrow's meeting (vi måste göra en del ändringar i planeringen för mötet i morgon)<br><br>break<br>  noun,<br>  spricka<br>  ,<br>  bräcka<br>  ,<br>  öppning<br>  ,<br>  avbrott<br>  ,<br>  lucka<br>  ,<br>  mellanrum<br>  ,<br>  paus<br>  ,<br>  rast<br>  ,<br>  ändring<br>  ,<br>  förändring<br>  ,<br>  omslag<br><br>evolution<br>  noun,<br>  evolution<br>  ,<br>  förändring<br>  ,<br>  långsam förändring<br>  ,<br>  utveckling<br>  ,<br>  framväxande<br><br>shift<br>  noun,<br>  byte<br>  ,<br>  förändring<br>  Explanation: A change<br>  Example: There's been a shift in opinion on this issue. (I den här frågan har det skett en förändring i opinionen.)<br><br>turn<br>  noun,<br>  vändning<br>  ,<br>  omsvängning<br>  ,<br>  förändring<br>  ,<br>  inriktning<br>  ,<br>  kris<br>  ,<br>  vändpunkt<br><br>alternation<br>  ,<br>  förändring<br><br>modification<br>  ,<br>  modifiering<br>  ,<br>  förändring<br>  ,<br>  modifikation<br>  ,<br>  ändring, förändring<br>  ,<br>  ändring
+missförstånd	misunderstanding
+motsvarar	motsvara<br>  verb,<br>  correspond to<br>  ,<br>  be equivalent to<br>  Grammar comment: x & y<br>  Pronunciation: [²m'o:tsva:rar]<br>  Inflections:  motsvarade, motsvarat, motsvara, motsvarar<br>  Use: även lös sms<br>  Definition: vara likvärdig el. jämförbar med<br>  Example: ett engelskt pund motsvarar 10 svenska kronor (one English pound is equivalent to 10 Swedish kronor)<br><br>testicular<br>  ,<br>  motsvarar
+beräkna	beräkna<br>  verb (försvagat " uppskatta"),<br>  calculate<br>  ,<br>  reckon<br>  Grammar comment: A & x/att + S<br>  Pronunciation: [ber'ä:knar]<br>  Inflections:  beräknade, beräknat, beräkna, beräknar<br>  Synonyms: kalkylera<br>  Definition: räkna ut<br>  Example: vi beräknar att varannan svensk har sett filmen (in our estimate, just about every other Swede has seen the film),<br>  undersökningen beräknas bli klar nästa vecka (the study is expected to be ready next week)<br><br>approximate<br>  verb,<br>  approximera<br>  ,<br>  beräkna<br>  Grammar comment: transitivt<br><br>calculate<br>  verb,<br>  beräkna<br>  ,<br>  räkna ut<br>  ,<br>  kalkylera<br>  Grammar comment: transitivt<br><br>cast<br>  verb,<br>  beräkna<br>  [inom astrologi],<br>  ställa<br>  Grammar comment: transitivt<br>  Example: cast somebody's horoscope (ställa någons horoskop)<br><br>compute<br>  verb,<br>  beräkna<br>  ,<br>  kalkylera<br>  ,<br>  uppskatta<br>  Grammar comment: transitivt<br><br>design<br>  verb,<br>  planera<br>  ,<br>  tänka ut<br>  ,<br>  beräkna<br>  Grammar comment: transitivt<br><br>estimate<br>  verb,<br>  värdera<br>  [om pris, storlek, mängd etcetera],<br>  uppskatta<br>  ,<br>  beräkna<br>  ,<br>  taxera<br>  ,<br>  anslå<br>  Grammar comment: transitivt<br><br>estimate<br>  verb,<br>  kalkylera<br>  ,<br>  beräkna<br>  ,<br>  beräkna kostnaderna<br>  ,<br>  göra ett kostnadsförslag<br>  Grammar comment: intransitivt<br><br>measure<br>  verb,<br>  mäta<br>  ,<br>  beräkna<br>  ,<br>  uppskatta<br>  Grammar comment: transitivt<br>  Explanation: Find, judge or gauge the size, quality or quantity of something.<br>  Example: Measure off two yards of material for a dress (Mäta upp knappt två meter tyg till en klänning.)<br><br>project<br>  verb,<br>  beräkna<br>  Grammar comment: transitivt<br>  Example: the projected profit for last year (den beräknade vinsten för förra året)<br><br>reckon<br>  verb,<br>  beräkna<br>  ,<br>  räkna ut<br>  ,<br>  uppskatta<br>  Grammar comment: transitivt<br><br>strike<br>  verb,<br>  avsluta<br>  ,<br>  göra upp<br>  ,<br>  träffa<br>  ,<br>  finna<br>  ,<br>  komma fram till<br>  ,<br>  beräkna<br>  ,<br>  sluta<br>  Grammar comment: transitivt<br>  Inflections:  struck, struck
+förflytta	förflytta<br>  verb,<br>  move<br>  ,<br>  transport<br>  Grammar comment: A & x/sig (+ RIKTNING)<br>  Pronunciation: [förfl'yt:ar]<br>  Inflections:  förflyttade, förflyttat, förflytta, förflyttar<br>  Synonyms: deportation, forsla, omlokalisera, rubba, teleportera, transferera, transportera, överföra<br>  Definition: ändra läge på, flytta på<br>  Example: förflytta sig i rullstol (get about in a wheelchair, transport oneself in a wheelchair)<br>  Derivations: förflyttning (removal, transportation)<br><br>remove<br>  verb,<br>  ta bort<br>  ,<br>  ta av<br>  ,<br>  ta ur<br>  ,<br>  flytta<br>  ,<br>  flytta bort<br>  ,<br>  förflytta<br>  ,<br>  föra bort<br>  ,<br>  forsla bort<br>  ,<br>  avlägsna<br>  ,<br>  röja undan<br>  Grammar comment: transitivt<br>  Example: the president was removed from his office (presidenten avlägsnades från sin post)
+begrepp	begrepp<br>  noun,<br>  conception<br>  ,<br>  idea<br>  ,<br>  concept<br>  ,<br>  notion<br>  Pronunciation: [begr'ep:]<br>  Inflections:  begreppet, begrepp, begreppen<br>  Synonyms: term<br>  Definition: föreställning, uppfattning<br>  Example: begreppet "standard" (the concept of "standard"),<br>  jag har inget begrepp om vad det kan kosta (I haven't the slightest idea as to what it might cost)<br>  Idiom: stå i begrepp att ("just ha för avsikt att") resa (be on the point of departure ("have the intention of departing"))<br>  Compounds: begrepps|mässig (conceptual),<br>  begrepps|förvirring (confusion of ideas)<br><br>conception<br>  noun,<br>  föreställning<br>  ,<br>  uppfattning<br>  ,<br>  begrepp<br><br>idea<br>  noun,<br>  idé<br>  ,<br>  begrepp<br>  ,<br>  föreställning<br>  ,<br>  uppfattning<br>  ,<br>  syn<br>  ,<br>  åsikt<br>  ,<br>  mening<br>  ,<br>  avsikt<br>  ,<br>  påhitt<br>  ,<br>  uppslag<br>  ,<br>  aning<br>  Explanation: föreställning, misstanke, förkänsla<br>  Example: he hasn't the slightest idea (han har inte den blekaste aning),<br>  I've no idea what it would cost (jag har ingen aning om vad det skulle kosta)<br><br>notion<br>  noun,<br>  föreställning<br>  ,<br>  begrepp
+gränsvärde	limit
+oändligt	Infinitely
+Uppskatta	Estimate
+sammanfaller	coincides
+därmed	thus
+Genomsnittlig	Average
+förädla	refine
+preliminärt	preliminär<br>  adjective,<br>  preliminary<br>  Pronunciation: [prelimin'ä:r]<br>  Inflections:  preliminärt, preliminära<br>  Definition: inte slutgiltig, förberedande<br>  Example: preliminära resultat (preliminary findings (results))
+skriva under	sign
+skriva under	sign
+avstående	waive

@@ -18,14 +18,28 @@ def save_to_wordbook(original, translated):
         json.dump(wordbook, f, ensure_ascii=False, indent=2)
 
 def export_wordbook_to_anki(filename=None):
+    """
+    Export the wordbook as a tab-delimited text file with Anki import headers,
+    so it can be directly imported as Basic cards into Anki.
+    """
     if filename is None:
         filename = ANKI_EXPORT_PATH
     wordbook = load_wordbook()
     try:
         with open(filename, "w", encoding="utf-8") as f:
+            # === CHANGES: Add Anki import headers ===
+            f.write("#separator:Tab\n")
+            f.write("#columns:Word\tDefinition\n")  # Field names mapped to NoteType fields
+            f.write("#notetype:Basic\n")  # Use the Basic note type
+            f.write("#deck:Vocabulary\n")   # Target deck name
+            # === END CHANGES ===
+
             for entry in wordbook:
-                f.write(f"{entry['original']}\t{entry['translated']}\n")
+                original = entry['original']
+                # Replace newlines with <br> for multiline definitions
+                definition = entry['translated'].replace("\n", "<br>")
+                f.write(f"{original}\t{definition}\n")
+
         print(f"[✓] Exported {len(wordbook)} entries to {filename}")
     except Exception as e:
         raise RuntimeError(f"Failed to export to Anki: {e}")
-

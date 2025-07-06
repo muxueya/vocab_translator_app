@@ -1,86 +1,91 @@
 [
+
   {
-    "original": "Safe fallback when wordbook.json is empty or malformed",
-    "translated": "Säker fallback när wordbook.json är tom eller missbildad"
+    "original": "beviljat",
+    "translated": "bevilja\n  verb,\n  grant\n  ,\n  allow\n  ,\n  award\n  Grammar comment: A & x\n  Pronunciation: [bev'il:jar]\n  Inflections:  beviljade, beviljat, bevilja, beviljar\n  Synonyms: godkänna, låta, medgiva, tillåta\n  Definition: gå med på, medge\n  Example: bevilja ledighet (grant leave)"
   },
   {
-    "original": "Safe fallback when wordbook.json is empty or malformed",
-    "translated": "Säker fallback när wordbook.json är tom eller missbildad"
+    "original": "händer",
+    "translated": "hand\n  noun,\n  hand\n  Pronunciation: [han:d]\n  Inflections:  handen, händer\n  Synonyms: labb\n  Definition: yttersta delen av en människas arm (the terminal part of the upper limb of humans and other primates)\n  Example: sy för hand (sew by hand),\n  gå hand i hand (walk hand in hand),\n  tvätta händerna (wash one's hands)\n  Idiom: på egen hand (\"själv\") (by oneself),\n  efter hand (\"fortlöpande\") (gradually, by degrees (\"continuously\")),\n  ha till hands (\"ha klart till användning\") (have at hand (\"have available and ready for use\")),\n  i första hand (\"viktigast, främst\") (in the first place, preferably),\n  ta hand om (\"vårda o dyl\") (take care of (\"look after, etc.\"))\n  Compounds: hand|bagage (hand luggage)"
   },
   {
-    "original": "Error messages shown in a QMessageBox if saving fails (e.g., due to a corrupted or missing file)",
-    "translated": "Felmeddelanden som visas i en QMessageBox om du sparar misslyckas (t.ex. på grund av en skadad eller saknad fil)"
+    "original": "lutning",
+    "translated": "lutning\n  noun,\n  treatment with lye\n  Pronunciation: [²l'u:tning]\n  Inflections:  lutningen, lutningar\n  Synonyms: backe, sluttning\n  Definition: det att luta; sluttning\n\nbanking\n  noun,\n  skevning\n  [flygplan],\n  bankning\n  ,\n  lutning\n\ndip\n  noun,\n  sänka\n  ,\n  nedgång\n  ,\n  svacka\n  ,\n  dalning\n  ,\n  lutning\n\ndowngrade\n  noun,\n  lutning\n  [särskilt på väg]\n\ngrade\n  noun,\n  sluttning\n  [i synnerhet amerikansk engelska],\n  lutning\n  ,\n  stigning\n  ,\n  backe\n\ngradient\n  noun,\n  stigning\n  ,\n  lutning\n  ,\n  lutningsgrad\n  ,\n  stigningsgrad\n  ,\n  sluttning\n  [konkret],\n  backe\n  ,\n  stigning\n\ninclination\n  noun,\n  lutning\n  ,\n  sluttning\n  ,\n  böjning\n  ,\n  stigning\n\nincline\n  noun,\n  sluttning\n  ,\n  lutning\n  ,\n  stigning\n\nrake\n  noun,\n  lutning\n  Example: the rake of a mast (en masts lutning)\n\nslope\n  noun,\n  lutning\n  ,\n  resning\n  ,\n  dosering\n  [teknik],\n  stigning\n\ntilt\n  noun,\n  lutning\n  Idiom: (at) full tilt (i full fart (informellt))"
   },
   {
-    "original": "Let me know if you'd like the app to confirm successful export with a popup as well.",
-    "translated": "Låt mig veta om du vill att appen också ska bekräfta framgångsrik export med en popup."
+    "original": "mått",
+    "translated": "measure"
   },
   {
-    "original": "Fixed: The \"Export to Anki\" button now works correctly without crashing.",
-    "translated": "Fast: \"Exportera till Anki\" -knappen fungerar nu korrekt utan att krascha."
+    "original": "slags",
+    "translated": "sort of"
   },
   {
-    "original": "Fixed: The \"Export to Anki\" button now works correctly without crashing.",
-    "translated": "Fast: \"Exportera till Anki\" -knappen fungerar nu korrekt utan att krascha."
+    "original": "förändring",
+    "translated": "förändring\n  noun,\n  change\n  Pronunciation: [för'en:dring]\n  Inflections:  förändringen, förändringar\n  Synonyms: mutation, ombildning, ombyte, omställning, omvandling, omväxling, skifte, skiftning, transformation, vändpunkt, växling, ändring\n  Definition: ändring, förvandling\n  Example: samhället har genomgått stora förändringar (society has changed a great deal)\n  Compounds: klimatförändring (climate change),\n  åldersförändring (change with age),\n  synförändring (change in sight),\n  attitydförändring (change of attitude)\n\nalteration\n  noun,\n  förändring\n  ,\n  ändring\n  ,\n  modifiering\n  Example: we'll have to make a few alterations in our plans for tomorrow's meeting (vi måste göra en del ändringar i planeringen för mötet i morgon)\n\nbreak\n  noun,\n  spricka\n  ,\n  bräcka\n  ,\n  öppning\n  ,\n  avbrott\n  ,\n  lucka\n  ,\n  mellanrum\n  ,\n  paus\n  ,\n  rast\n  ,\n  ändring\n  ,\n  förändring\n  ,\n  omslag\n\nevolution\n  noun,\n  evolution\n  ,\n  förändring\n  ,\n  långsam förändring\n  ,\n  utveckling\n  ,\n  framväxande\n\nshift\n  noun,\n  byte\n  ,\n  förändring\n  Explanation: A change\n  Example: There's been a shift in opinion on this issue. (I den här frågan har det skett en förändring i opinionen.)\n\nturn\n  noun,\n  vändning\n  ,\n  omsvängning\n  ,\n  förändring\n  ,\n  inriktning\n  ,\n  kris\n  ,\n  vändpunkt\n\nalternation\n  ,\n  förändring\n\nmodification\n  ,\n  modifiering\n  ,\n  förändring\n  ,\n  modifikation\n  ,\n  ändring, förändring\n  ,\n  ändring"
   },
   {
-    "original": "Would you like help integrating a proper main.py entry point using QApplication and TranslatorApp cleanly?",
-    "translated": "Vill du hjälpa till att integrera en ordentlig main.py -ingångspunkt med QApplication och TranslatorApp rent?"
+    "original": "missförstånd",
+    "translated": "misunderstanding"
   },
   {
-    "original": "All GUI changes happen safely in the main thread using pyqtSignal.",
-    "translated": "Alla GUI -förändringar sker säkert i huvudtråden med hjälp av pyqtsignal."
+    "original": "motsvarar",
+    "translated": "motsvara\n  verb,\n  correspond to\n  ,\n  be equivalent to\n  Grammar comment: x & y\n  Pronunciation: [²m'o:tsva:rar]\n  Inflections:  motsvarade, motsvarat, motsvara, motsvarar\n  Use: även lös sms\n  Definition: vara likvärdig el. jämförbar med\n  Example: ett engelskt pund motsvarar 10 svenska kronor (one English pound is equivalent to 10 Swedish kronor)\n\ntesticular\n  ,\n  motsvarar"
   },
   {
-    "original": "repetition",
-    "translated": "upprepning"
+    "original": "beräkna",
+    "translated": "beräkna\n  verb (försvagat \" uppskatta\"),\n  calculate\n  ,\n  reckon\n  Grammar comment: A & x/att + S\n  Pronunciation: [ber'ä:knar]\n  Inflections:  beräknade, beräknat, beräkna, beräknar\n  Synonyms: kalkylera\n  Definition: räkna ut\n  Example: vi beräknar att varannan svensk har sett filmen (in our estimate, just about every other Swede has seen the film),\n  undersökningen beräknas bli klar nästa vecka (the study is expected to be ready next week)\n\napproximate\n  verb,\n  approximera\n  ,\n  beräkna\n  Grammar comment: transitivt\n\ncalculate\n  verb,\n  beräkna\n  ,\n  räkna ut\n  ,\n  kalkylera\n  Grammar comment: transitivt\n\ncast\n  verb,\n  beräkna\n  [inom astrologi],\n  ställa\n  Grammar comment: transitivt\n  Example: cast somebody's horoscope (ställa någons horoskop)\n\ncompute\n  verb,\n  beräkna\n  ,\n  kalkylera\n  ,\n  uppskatta\n  Grammar comment: transitivt\n\ndesign\n  verb,\n  planera\n  ,\n  tänka ut\n  ,\n  beräkna\n  Grammar comment: transitivt\n\nestimate\n  verb,\n  värdera\n  [om pris, storlek, mängd etcetera],\n  uppskatta\n  ,\n  beräkna\n  ,\n  taxera\n  ,\n  anslå\n  Grammar comment: transitivt\n\nestimate\n  verb,\n  kalkylera\n  ,\n  beräkna\n  ,\n  beräkna kostnaderna\n  ,\n  göra ett kostnadsförslag\n  Grammar comment: intransitivt\n\nmeasure\n  verb,\n  mäta\n  ,\n  beräkna\n  ,\n  uppskatta\n  Grammar comment: transitivt\n  Explanation: Find, judge or gauge the size, quality or quantity of something.\n  Example: Measure off two yards of material for a dress (Mäta upp knappt två meter tyg till en klänning.)\n\nproject\n  verb,\n  beräkna\n  Grammar comment: transitivt\n  Example: the projected profit for last year (den beräknade vinsten för förra året)\n\nreckon\n  verb,\n  beräkna\n  ,\n  räkna ut\n  ,\n  uppskatta\n  Grammar comment: transitivt\n\nstrike\n  verb,\n  avsluta\n  ,\n  göra upp\n  ,\n  träffa\n  ,\n  finna\n  ,\n  komma fram till\n  ,\n  beräkna\n  ,\n  sluta\n  Grammar comment: transitivt\n  Inflections:  struck, struck"
   },
   {
-    "original": "knark",
-    "translated": "dope"
+    "original": "förflytta",
+    "translated": "förflytta\n  verb,\n  move\n  ,\n  transport\n  Grammar comment: A & x/sig (+ RIKTNING)\n  Pronunciation: [förfl'yt:ar]\n  Inflections:  förflyttade, förflyttat, förflytta, förflyttar\n  Synonyms: deportation, forsla, omlokalisera, rubba, teleportera, transferera, transportera, överföra\n  Definition: ändra läge på, flytta på\n  Example: förflytta sig i rullstol (get about in a wheelchair, transport oneself in a wheelchair)\n  Derivations: förflyttning (removal, transportation)\n\nremove\n  verb,\n  ta bort\n  ,\n  ta av\n  ,\n  ta ur\n  ,\n  flytta\n  ,\n  flytta bort\n  ,\n  förflytta\n  ,\n  föra bort\n  ,\n  forsla bort\n  ,\n  avlägsna\n  ,\n  röja undan\n  Grammar comment: transitivt\n  Example: the president was removed from his office (presidenten avlägsnades från sin post)"
   },
   {
-    "original": "knark",
-    "translated": "dope"
+    "original": "begrepp",
+    "translated": "begrepp\n  noun,\n  conception\n  ,\n  idea\n  ,\n  concept\n  ,\n  notion\n  Pronunciation: [begr'ep:]\n  Inflections:  begreppet, begrepp, begreppen\n  Synonyms: term\n  Definition: föreställning, uppfattning\n  Example: begreppet \"standard\" (the concept of \"standard\"),\n  jag har inget begrepp om vad det kan kosta (I haven't the slightest idea as to what it might cost)\n  Idiom: stå i begrepp att (\"just ha för avsikt att\") resa (be on the point of departure (\"have the intention of departing\"))\n  Compounds: begrepps|mässig (conceptual),\n  begrepps|förvirring (confusion of ideas)\n\nconception\n  noun,\n  föreställning\n  ,\n  uppfattning\n  ,\n  begrepp\n\nidea\n  noun,\n  idé\n  ,\n  begrepp\n  ,\n  föreställning\n  ,\n  uppfattning\n  ,\n  syn\n  ,\n  åsikt\n  ,\n  mening\n  ,\n  avsikt\n  ,\n  påhitt\n  ,\n  uppslag\n  ,\n  aning\n  Explanation: föreställning, misstanke, förkänsla\n  Example: he hasn't the slightest idea (han har inte den blekaste aning),\n  I've no idea what it would cost (jag har ingen aning om vad det skulle kosta)\n\nnotion\n  noun,\n  föreställning\n  ,\n  begrepp"
   },
   {
-    "original": "olämpligt",
-    "translated": "olämplig\n  adjective,\n  unsuitable\n  ,\n  inappropriate\n  Pronunciation: [²'o:lem:plig]\n  Inflections:  olämpligt, olämpliga\n  Synonyms: opassande\n  Definition: inte lämplig, inte passande\n  Example: en olämplig tidpunkt (an unsuitable time)"
+    "original": "gränsvärde",
+    "translated": "limit"
   },
   {
-    "original": "bara",
-    "translated": "välsigna"
+    "original": "oändligt",
+    "translated": "Infinitely"
   },
   {
-    "original": "välsigna",
-    "translated": "välsigna\n  verb (även allmänt \" prisa, vara glad över\"),\n  bless\n  [also commonly \" praise, be happy about\"]\n  Grammar comment: A & B/x\n  Pronunciation: [vels'ing:nar]\n  Inflections:  välsignade, välsignat, välsigna, välsignar\n  Definition: be Gud beskydda\n\nminsters\n  ,\n  välsigna"
+    "original": "Uppskatta",
+    "translated": "Estimate"
   },
   {
-    "original": "välsigna",
-    "translated": "ur fältet"
+    "original": "sammanfaller",
+    "translated": "coincides"
   },
   {
-    "original": "Samhälle",
-    "translated": "society\n  noun,\n  Samhälle\n  ,\n  samhällsgrupp\n  Variant: community\n  Explanation: Society A general social unit where people live together. Can be divided into different communities."
+    "original": "därmed",
+    "translated": "thus"
   },
   {
-    "original": "program",
-    "translated": "program\n  noun,\n  programme\n  ,\n  (program [US])\n  Pronunciation: [progr'am:]\n  Inflections:  programmet, program, programmen\n  Synonyms: agenda, dagordning, schema\n  Definition: (skriven) plan över hur något skall genomföras\n  Example: vad står på programmet i kväll? (what is on the programme this evening?),\n  ett trafikpolitiskt program (a traffic policy programme)\n  Compounds: teaterprogram (theatre programme),\n  partiprogram (party programme),\n  program|skrift (party manifesto),\n  hjälpprogram (aid programme)\n\nbill\n  noun,\n  affisch\n  ,\n  anslag\n  ,\n  program\n  Explanation: stort anslag, plakat\n\ncard\n  noun,\n  program\n  ,\n  lista\n  ,\n  meddelande\n\nprogram\n  noun,\n  program\n  [data],\n  dagordning\n\nprogram\n  noun,\n  program\n  ,\n  kurs\n  ,\n  plan\n  ,\n  läroplan\n  [amerikansk engelska, i brittisk engelska programme]\n\nprogramme\n  noun,\n  program\n  ,\n  kurs\n  ,\n  plan\n  ,\n  läroplan\n  [brittisk engelska, i amerikansk engelska program]\n  Explanation: a kind of unit *trust\n\nticket\n  noun,\n  program\n  [American English],\n  partiprogram\n  [American English]\n\nprogrammes\n  ,\n  program"
+    "original": "Genomsnittlig",
+    "translated": "Average"
   },
   {
-    "original": "Click on the image to pick a color",
-    "translated": "Klicka på bilden för att välja en färg"
+    "original": "förädla",
+    "translated": "refine"
   },
   {
-    "original": "också",
-    "translated": "också\n  adverb,\n  too\n  ,\n  also\n  Pronunciation: [²'åk:så]\n  Synonyms: likaså, samt, även\n  Definition: även, dessutom\n  Example: inte bara jag utan också min fru spelar fiol (I play the violin and my wife does as well),\n  jag spelar fiol också (I play the violin as well),\n  jag ska också gå nu (I, too, will go out now)\n\ntoo\n  adverb,\n  också\n  ,\n  med\n  ,\n  även\n  ,\n  dessutom\n  ,\n  därjämte\n  ,\n  därtill\n\nblacklisting\n  ,\n  svartlistning\n  ,\n  svartlista\n  ,\n  Svartlistad\n  ,\n  också\n\ncalamus\n  ,\n  skeptisk\n  ,\n  Också\n  ,\n  arbiska\n  ,\n  plattfot\n\nbantam\n  ,\n  Också"
+    "original": "preliminärt",
+    "translated": "preliminär\n  adjective,\n  preliminary\n  Pronunciation: [prelimin'ä:r]\n  Inflections:  preliminärt, preliminära\n  Definition: inte slutgiltig, förberedande\n  Example: preliminära resultat (preliminary findings (results))"
   },
   {
-    "original": "bild",
-    "translated": "bild\n  noun (bildligt \" skildring\"),\n  image\n  ,\n  picture\n  Pronunciation: [bil:d]\n  Inflections:  bilden, bilder\n  Synonyms: foto, fotografi, ikon, illustration, image, målning, skildring, teckning\n  Definition: återgivning (av något) genom teckning, foto etc (representation (of sth.) by a drawing, photograph, etc.)\n  Example: ta bilder (take pictures),\n  ge en bild av sin situation (describe one's situation)\n  Compounds: bild|mässig (visual, pictorial),\n  bild|konstnär (painter),\n  bild|material (illustrations, pictures),\n  närbild (close-up),\n  bild|huggare (sculptor),\n  gatubild (street scene),\n  minnesbild (recollection, visual picture),\n  bild|konst (visual arts)\n\naspect\n  noun,\n  utseende\n  ,\n  min\n  ,\n  uppsyn\n  ,\n  ansikte\n  ,\n  bild\n  ,\n  anblick\n\ndepiction\n  noun,\n  bild\n  ,\n  teckning\n  ,\n  skildring\n\nimage\n  noun,\n  bild\n  ,\n  sinnebild\n  ,\n  föreställning\n  ,\n  idé\n  ,\n  symbol\n  ,\n  efterbild\n  [psykologi]\n\nimage\n  noun,\n  metafor\n  [språkvetenskap],\n  liknelse\n  ,\n  bild\n\nimage\n  noun,\n  bild\n  ,\n  avbild\n  ,\n  avbildning\n  ,\n  bildstod\n  ,\n  spegelbild\n  ,\n  kopia\n  [i Bibeln],\n  motstycke\n  Example: she is the very image of her mother (hon är en avbild av sin mor),\n  God made man in His image (Gud skapade människan till sin avbild)\n\nmetaphor\n  noun,\n  metafor\n  ,\n  bild\n  ,\n  bildligt uttryck\n\npainting\n  noun,\n  tavla\n  ,\n  bild\n  ,\n  målning\n  Example: hang a painting on the wall (hänga upp en tavla på väggen)\n\nphoto\n  noun,\n  foto\n  [everyday language],\n  kort\n  ,\n  bild\n  Example: take a photo (ta kort)\n\npicture\n  noun,\n  bild\n  [TV],\n  bildruta\n  ,\n  bildskärm\n\npicture\n  noun,\n  bild\n  ,\n  tavla\n  ,\n  målning\n  ,\n  porträtt\n  ,\n  illustration\n  ,\n  foto\n  ,\n  fotografi\n  ,\n  kort\n  Explanation: representation (of sth.) by a drawing, photograph, etc.\n  Idiom: look (be) a picture (vara vacker som en tavla, vara skönheten själv)\n\npicture\n  noun,\n  situation\n  ,\n  läge\n  ,\n  bild\n  Idiom: be out of the picture ((informellt) vara ute ur bilden),\n  the big picture ((amerikansk engelska) helheten),\n  get the picture ((informellt) förstå, fatta (situationen), ha bilden klar för sig),\n  put somebody in the picture (informera någon om läget, sätta in någon i situationen)\n\nportrait\n  noun,\n  bild\n  [figuratively],\n  avbild\n\nrepresentation\n  noun,\n  framställande\n  ,\n  återgivande\n  ,\n  skildring\n  ,\n  framställning\n  ,\n  bild\n  ,\n  avbild\n  ,\n  symbol\n\nscene\n  noun,\n  plats\n  [som ser ut som en tavla],\n  bild\n  ,\n  scen\n  ,\n  syn\n  Example: what a picturesque scene (en sådan pittoresk syn)\n\nview\n  noun,\n  fotografi\n  ,\n  bild\n  ,\n  kort"
+    "original": "skriva under",
+    "translated": "sign"
   },
   {
-    "original": "olämpligt",
-    "translated": "olämplig\n  adjective,\n  unsuitable\n  ,\n  inappropriate\n  Pronunciation: [²'o:lem:plig]\n  Inflections:  olämpligt, olämpliga\n  Synonyms: opassande\n  Definition: inte lämplig, inte passande\n  Example: en olämplig tidpunkt (an unsuitable time)"
+    "original": "skriva under",
+    "translated": "sign"
+  },
+  {
+    "original": "avstående",
+    "translated": "waive"
   }
 ]

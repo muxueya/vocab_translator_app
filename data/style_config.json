@@ -1,7 +1,7 @@
 {
     "max_text_length": 2000,
     "window_color": "#ffffff",
-    "opacity": 1.0,
+    "opacity": 0.7,
   
     "original_bg_color": "#ffffff",
     "original_text_color": "#000000",
