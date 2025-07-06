@@ -1,4 +1,5 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QCheckBox, QMessageBox, QMenuBar, QAction, QTextEdit, QSizePolicy
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QSystemTrayIcon, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QCheckBox, QMessageBox, QMenuBar, QAction, QTextEdit, QSizePolicy
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
 import pyperclip
 import json
@@ -65,6 +66,17 @@ class TranslatorApp(QWidget):
         self.setGeometry(300, 300, 500, 300)
         self.setFixedSize(800, 400)
         self.setWindowFlag(Qt.WindowStaysOnTopHint)
+        self.tray = QSystemTrayIcon(self)
+        icon_path = os.path.join(os.path.dirname(__file__), 'icon.png')
+        app_icon = QIcon(icon_path)
+        # set window icon too (optional, but ensures tray has it)
+        self.setWindowIcon(app_icon)
+
+        self.tray = QSystemTrayIcon(self)
+        self.tray.setIcon(app_icon)       # <- must have a valid icon
+        self.tray.setVisible(True)          
+        self.tray.setIcon(self.windowIcon() or QIcon())
+        self.tray.show()
 
         self.audio_process = None
         self.audio_file = None
@@ -217,7 +229,21 @@ class TranslatorApp(QWidget):
         if self.last_original:
             displayed = self.translation_label.toPlainText().strip()
             if displayed:
+                # Persist to disk
                 save_to_wordbook(self.last_original, displayed)
+
+                # Show a one-second native notification
+                if platform.system() == "Darwin":
+                    # macOS Notification Center
+                    print(f"✅ Word saved: {self.last_original}")
+                else:
+                    # Windows/Linux via Qt tray icon
+                    self.tray.showMessage(
+                        "Wordbook",
+                        "Word saved",
+                        QSystemTrayIcon.Information,
+                        1000
+                    )
 
     def export_to_anki(self):
         export_wordbook_to_anki()
