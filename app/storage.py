@@ -13,9 +13,12 @@ def load_wordbook():
 
 def save_to_wordbook(original, translated):
     wordbook = load_wordbook()
+    if any(entry["original"] == original for entry in wordbook):
+        return False
     wordbook.append({"original": original, "translated": translated})
     with open(WORD_BOOK_PATH, "w", encoding="utf-8") as f:
         json.dump(wordbook, f, ensure_ascii=False, indent=2)
+    return True
 
 def export_wordbook_to_anki(filename=None):
     """

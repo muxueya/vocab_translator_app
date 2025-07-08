@@ -230,20 +230,31 @@ class TranslatorApp(QWidget):
             displayed = self.translation_label.toPlainText().strip()
             if displayed:
                 # Persist to disk
-                save_to_wordbook(self.last_original, displayed)
+                success = save_to_wordbook(self.last_original, displayed)
 
                 # Show a one-second native notification
-                if platform.system() == "Darwin":
-                    # macOS Notification Center
-                    print(f"✅ Word saved: {self.last_original}")
+                if success:
+                    # Word was newly saved
+                    if platform.system() == "Darwin":
+                        print(f"✅ Word saved: {self.last_original}")
+                    else:
+                        self.tray.showMessage(
+                            "Wordbook",
+                            f"Saved: {self.last_original}",
+                            QSystemTrayIcon.Information,
+                            1000
+                        )
                 else:
-                    # Windows/Linux via Qt tray icon
-                    self.tray.showMessage(
-                        "Wordbook",
-                        "Word saved",
-                        QSystemTrayIcon.Information,
-                        1000
-                    )
+                    # Word was already present
+                    if platform.system() == "Darwin":
+                        print(f"⚠️ Already saved: {self.last_original}")
+                    else:
+                        self.tray.showMessage(
+                            "Wordbook",
+                            f"Already saved: {self.last_original}",
+                            QSystemTrayIcon.Warning,
+                            1000
+                        )
 
     def export_to_anki(self):
         export_wordbook_to_anki()

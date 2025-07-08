@@ -236,10 +236,6 @@
     "translated": "trygg\n  adjective (om människans omgivning),\n  secure\n  [used of human surroundings]\n  Pronunciation: [tryg:]\n  Inflections:  tryggt, trygga\n  Definition: säker\n  Example: en trygg famn (safe arms),\n  en trygg uppväxtmiljö (secure (family) environment),\n  vara i trygga händer (be in safe hands)\n\ncomfortable\n  adjective,\n  trygg\n  ,\n  tillräcklig\n\nconfident\n  adjective,\n  säker\n  ,\n  trygg\n  ,\n  självsäker\n\nsafe\n  adjective,\n  säker\n  ,\n  trygg\n  ,\n  riskfri\n  ,\n  ofarlig\n\nsecure\n  adjective,\n  säker\n  ,\n  trygg"
   },
   {
-    "original": "print(\"✅ Word saved\"",
-    "translated": "tryck (\"✅ Word Saved\""
-  },
-  {
     "original": "äventyra",
     "translated": "jeopardize"
   },
@@ -386,5 +382,33 @@
   {
     "original": "erkända",
     "translated": "recognized"
+  },
+  {
+    "original": "noggrant",
+    "translated": "noggrann\n  adjective,\n  careful\n  ,\n  thorough\n  Grammar comment: & (med x)\n  Pronunciation: [²n'o:gran:]\n  Inflections:  noggrant, noggranna\n  Synonyms: grundlig, ingående, noga, omsorgsfull, ordentlig, pedant, petig, precis, prudentlig, rigorös, stringent\n  Definition: grundlig och omsorgsfull\n  Example: en noggrann undersökning (a careful (minute) examination)\n\nfinely\n  adverb,\n  fint\n  ,\n  noga\n  ,\n  noggrant\n  ,\n  skarpt\n  ,\n  subtilt\n\nneatly\n  adverb,\n  ordentligt\n  ,\n  effektivt\n  ,\n  noggrant\n  ,\n  omsorgsfullt\n  Example: it needs to be neatly done (det måste göras omsorgsfullt)\n\nover\n  adverb,\n  över\n  ,\n  noggrant\n  ,\n  helt och hållet\n  Example: think it over before you decide (tänk över saken innan du bestämmer dig)\n\nstudiously\n  adverb,\n  flitigt\n  ,\n  lärt\n  ,\n  noggrant\n\nwell\n  adverb,\n  noggrant\n  ,\n  noga\n  Inflections:  better, best\n  Example: I'll wash it well (jag ska tvätta den noggrant),\n  she is well aware of that (det vet hon så väl)\n  Idiom: be well worth seeing/visiting etcetera (vara väl värd att ses/besökas etcetera)"
+  },
+  {
+    "original": "Bekräftelse",
+    "translated": "Confirmation"
+  },
+  {
+    "original": "inskrivning",
+    "translated": "inskrivning\n  noun,\n  registration\n  Pronunciation: [²'in:skri:vning]\n  Inflections:  inskrivningen, inskrivningar\n  Synonyms: registrering\n  Definition: registrering (av elever, värnpliktiga etc)\n\nenrollment\n  noun,\n  inskrivning\n  ,\n  registrering\n  [amerikansk engelska, i brittisk engelska enrolment]\n\nenrolment\n  noun,\n  registrering\n  ,\n  inskrivning\n  [brittisk engelska, i amerikansk engelska enrollment]\n  Example: the enrolment of our son (vår sons inskrivning)\n\nenrolment\n  noun,\n  Inskrivning\n  Variant: registration\n  Explanation: The formal signing up to join a school or university.\n\nregistration\n  noun,\n  registrering\n  ,\n  inskrivning\n  ,\n  notering\n  ,\n  anmälan\n  ,\n  mantalsskrivning\n  ,\n  folkbokföring"
+  },
+  {
+    "original": "ersättning",
+    "translated": "replacement"
+  },
+  {
+    "original": "Grundläggande",
+    "translated": "Basic"
+  },
+  {
+    "original": "Förbered",
+    "translated": "Prepare"
+  },
+  {
+    "original": "nyligen",
+    "translated": "nyligen\n  adverb,\n  recently\n  Pronunciation: [²n'y:ligen]\n  Synonyms: härförleden, just, nyss\n  Definition: för kort tid sedan\n  Example: vi träffades helt nyligen i Lund (we met quite recently in Lund)\n\njust\n  adverb,\n  just\n  ,\n  nyss\n  ,\n  nyligen\n\nlate\n  adjective,\n  nyligen\n  ,\n  alldeles nyss\n  Grammar comment: ingen komparering\n  Example: there is some late news (det har precis kommit in några sena nyheter)\n\nnewly\n  adverb,\n  ny-\n  ,\n  nyligen\n  Explanation: as having just woken up and still drowsy\n  Example: she is a newly graduated lawyer (hon är nyutexaminerad jurist),\n  the newly-married couple looked very happy (det nygifta paret såg väldigt lyckligt ut)\n\nrecently\n  adverb,\n  nyss\n  ,\n  nyligen\n  ,\n  på sista tiden\n  Explanation: If it happened recently it happened a short while ago.\n  Example: The recently acquired car could be seen in the driveway. (Den nyligen inköpta bilen kunde ses på uppfarten.)"
   }
 ]
