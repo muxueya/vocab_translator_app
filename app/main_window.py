@@ -1,4 +1,4 @@
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QFont
 from PyQt5.QtWidgets import QSystemTrayIcon, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QCheckBox, QMessageBox, QMenuBar, QAction, QTextEdit, QSizePolicy
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
 import pyperclip
@@ -104,10 +104,20 @@ class TranslatorApp(QWidget):
         self.original_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
         self.translation_label = QTextEdit()
+        if platform.system() == "Darwin":
+            # macOS: switch the widget to an emoji font
+            emoji_font = QFont("Apple Color Emoji", self.translation_label.font().pointSize())
+            self.translation_label.setFont(emoji_font)
+        elif platform.system() == "Windows":
+            self.translation_label.setFont(QFont("Segoe UI Emoji", self.translation_label.font().pointSize()))
+        else:
+            self.translation_label.setFont(QFont("Noto Color Emoji", self.translation_label.font().pointSize()))
         self.translation_label.setReadOnly(True)
         self.translation_label.setWordWrapMode(True)
         self.translation_label.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.translation_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+
+
 
         button_layout = QHBoxLayout()
         self.copy_translate_btn = QPushButton("Translate")
@@ -279,9 +289,9 @@ class TranslatorApp(QWidget):
             self.lexikon_worker.start()
         # Otherwise, do nothing
 
-    def on_lexikon_ready(self, entry):
+    def on_lexikon_ready(self, entry_html):
         # === CHANGED: entry is now HTML, so render it ===
-        self.translation_label.setHtml(entry)
+        self.translation_label.setHtml(entry_html)
         self.current_mode = 'lexikon'
 
 
