@@ -24,23 +24,36 @@ def export_wordbook_to_anki(filename=None):
     """
     Export the wordbook as a tab-delimited text file with Anki import headers,
     so it can be directly imported as Basic cards into Anki.
+    Each note must be on one line; we strip out any stray newlines in HTML.
     """
     if filename is None:
         filename = ANKI_EXPORT_PATH
     wordbook = load_wordbook()
     try:
         with open(filename, "w", encoding="utf-8") as f:
-            # === CHANGES: Add Anki import headers ===
+            # === Anki import headers ===
             f.write("#separator:Tab\n")
-            f.write("#columns:Word\tDefinition\n")  # Field names mapped to NoteType fields
-            f.write("#notetype:Basic\n")  # Use the Basic note type
-            f.write("#deck:Vocabulary\n")   # Target deck name
-            # === END CHANGES ===
-
+            f.write("#columns:Word\tDefinition\n")
+            f.write("#notetype:Basic\n")
+            f.write("#deck:Vocabulary\n")
+            # ===========================
             for entry in wordbook:
-                original = entry['original']
-                # Replace newlines with <br> for multiline definitions
-                definition = entry['translated'].replace("\n", "<br>")
+                original = entry["original"]
+                definition = entry["translated"]
+
+                # === CHANGES START ===
+                # 1) Strip literal newlines so each record stays on one line
+                definition = definition.replace("\r", "").replace("\n", "")
+
+                # 2) (Optional) collapse multiple spaces to a single space
+                # import re
+                # definition = re.sub(r"\s+", " ", definition)
+
+                # 3) If your HTML came from QTextEdit.toHtml(), you may want
+                #    to remove the surrounding HTML header/footer:
+                #    definition = re.sub(r"^.*<body[^>]*>|</body>.*$", "", definition)
+                # === CHANGES END ===
+
                 f.write(f"{original}\t{definition}\n")
 
         print(f"[✓] Exported {len(wordbook)} entries to {filename}")

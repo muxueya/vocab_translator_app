@@ -15,3 +15,4 @@ dist/
 .vscode/
 data/wordbook.json
 data/anki_wordbook.txt
+data/dedupe_wordbook.py

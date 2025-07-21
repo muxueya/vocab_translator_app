@@ -227,7 +227,11 @@ class TranslatorApp(QWidget):
 
     def save_to_wordbook(self):
         if self.last_original:
-            displayed = self.translation_label.toPlainText().strip()
+            if self.current_mode == 'lexikon':
+                # preserve the HTML formatting from the QTextEdit
+                displayed = self.translation_label.toHtml().strip()
+            else:
+                displayed = self.translation_label.toPlainText().strip()
             if displayed:
                 # Persist to disk
                 success = save_to_wordbook(self.last_original, displayed)
@@ -276,8 +280,10 @@ class TranslatorApp(QWidget):
         # Otherwise, do nothing
 
     def on_lexikon_ready(self, entry):
-        self.translation_label.setText(entry)
+        # === CHANGED: entry is now HTML, so render it ===
+        self.translation_label.setHtml(entry)
         self.current_mode = 'lexikon'
+
 
     def on_lexikon_error(self, message):
         QMessageBox.warning(self, "Lexikon Error", f"Failed to fetch entry: {message}")
